@@ -1,0 +1,37 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Potluck Party</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <div class="header container flex-column bg-blue-300">
+        <header class="container flex text-black text-2xl font-medium p-2 mb-2 ">
+            <button class="m-3">
+                Home
+            </button>
+            <button class="m-3">
+                Dashboard
+            </button>
+            <button class="m-3">
+                Login
+            </button>
+            <button class="m-3">
+                Logout
+            </button>
+        </header>
+        <div class="container flex ">
+            <p class="text-blue-300 border-2 ml-4 mb-2 p-2 text-4xl bg-white shadow-lg shadow-blue-500/50 rounded-xl overflow-hidden font-bold">
+                The Tech Blog
+            </p>
+        </div>
+        
+    </div>
+      <main class="container ">
+        {{{ body }}}
+      </main>
+  </div>
+  </body>
+
+</html>
