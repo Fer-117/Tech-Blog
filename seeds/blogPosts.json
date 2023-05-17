@@ -1,0 +1,17 @@
+[
+  {
+    "title": "This is the first blog post",
+    "description": "This blog post will be the first section created",
+    "user_id": "1"
+  },
+  {
+    "title": "Second blog post",
+    "description": "the second blog post, this is hard",
+    "user_id": "1"
+  },
+  {
+    "title": "Third blog post",
+    "description": "I wonder how long it'll take until this becomes easy",
+    "user_id": "1"
+  }
+]
