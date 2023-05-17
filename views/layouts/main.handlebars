@@ -1,37 +1,61 @@
-<head>
-  <meta charset="UTF-8">
-  <title>Potluck Party</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Tech Blog</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+  </head>
 
-<body>
-  <div class="flex-column justify-space-around">
-    <div class="header container flex-column bg-blue-300">
-        <header class="container flex text-black text-2xl font-medium p-2 mb-2 ">
-            <button class="m-3">
-                Home
-            </button>
-            <button class="m-3">
-                Dashboard
-            </button>
-            <button class="m-3">
-                Login
-            </button>
-            <button class="m-3">
-                Logout
-            </button>
-        </header>
-        <div class="container flex ">
-            <p class="text-blue-300 border-2 ml-4 mb-2 p-2 text-4xl bg-white shadow-lg shadow-blue-500/50 rounded-xl overflow-hidden font-bold">
-                The Tech Blog
-            </p>
+  <body>
+    <div class='container flex-column justify-space-around h-screen'>
+      <div class='header container flex-column bg-blue-300'>
+        <div class='container flex text-black text-2xl font-medium p-2 mb-2'>
+          <a
+            href='/'
+            class='m-3 p-2 cursor-pointer rounded-lg hover:bg-blue-400 active:bg-blue-500'
+          >
+            Home
+          </a>
+          <a
+            href='/dashBoard'
+            class='m-3 p-2 cursor-pointer rounded-lg hover:bg-blue-400 active:bg-blue-500'
+          >
+            Dashboard
+          </a>
+          {{#if loggedIn}}
+            <a
+              id='logout'
+              href='/logout'
+              class='m-3 p-2 cursor-pointer rounded-lg hover:bg-blue-400 active:bg-blue-500'
+            >
+              Logout
+            </a>
+          {{else}}
+            <a
+              href='/login'
+              id='homeLogin'
+              class='m-3 p-2 cursor-pointer rounded-lg hover:bg-blue-400 active:bg-blue-500'
+            >
+              Login
+            </a>
+          {{/if}}
         </div>
-        
-    </div>
-      <main class="container ">
-        {{{ body }}}
-      </main>
-  </div>
-  </body>
+        <div class='container flex'>
+          <p
+            class='text-blue-300 border-2 ml-4 mb-2 p-2 text-4xl bg-white shadow-lg shadow-blue-500/50 rounded-xl overflow-hidden font-bold'
+          >
+            The Tech Blog
+          </p>
+        </div>
+      </div>
+      <div class='container flex-auto h-3/6 w-auto m-5 content-center'>
 
+        {{{body}}}
+
+      </div>
+    </div>
+    <!-- Only include the logout script if the user is logged in -->
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+  </body>
 </html>

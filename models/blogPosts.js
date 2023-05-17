@@ -11,28 +11,28 @@ BlogPost.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    dish_name: {
+    title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    guest_name: {
-      type: DataTypes.STRING,
       allowNull: false,
     },
-    has_nuts: {
-      type: DataTypes.BOOLEAN,
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'blog-post',
+    modelName: 'blog_post',
   }
 );
 
-module.exports = Dish;
+module.exports = BlogPost;
