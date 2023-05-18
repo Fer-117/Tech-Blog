@@ -17,15 +17,37 @@
 
 ## Description
 
-A cms style tech blog site
+A cms style tech blog site using sequelize ORM, express and handlebars in order to follow the MVC paradigm.
 
 ## Installation
 
-Since this is only a back-end project at the moment what you need to do is download or clone the repository first. Then open your IDE and in the terminal run npm install to download all the necessary dependencies. Make sure to remove the 'EXAMPLE' portion from the .env file and add your password as well as the user for your database.
+There are no installation instructions in order to run this project since it's deployed on heroku. However, feel free to download the code or clone the repository if you want to modify any code.
 
 ## Usage
 
-Once you have completed the installation instructions, you now have to create the database. Since I'm using MySql I open the MySql console and run 'source db/schema.sql' to run the schema.sql file which will create the database I need. You might have to follow different steps depending on the database you are using. After we have created the database, we can run 'npm run seed' in the terminal so that the database is seeded with data. Once we have completed these steps, we can run 'npm start' to start the server. When the server is up and running you can begin to consult the routes for this project using a tool like insomnia or postman. The routes you will use to consult the database are the following:
+In order to use this app you will have to sign up or log in. Here are some of the users store in the database you can use to log in since the sign up link might not be working at the moment.
+`[
+  {
+    "name": "Sal",
+    "password": "password12345"
+  },
+  {
+    "name": "Lernantino",
+    "password": "password12345"
+  },
+  {
+    "name": "Amiko",
+    "password": "password12345"
+  },
+  {
+    "name": "Jordan",
+    "password": "password12345"
+  },
+  {
+    "name": "Blake",
+    "password": "password12345"
+  }
+]`
 
 ## MIT License
 
