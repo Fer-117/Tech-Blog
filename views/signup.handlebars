@@ -5,33 +5,44 @@
     </h2>
   </div>
 
-  <div class='container items-center justify-center h-full flex flex-col'>
-    <form class='container flex flex-col m-auto p-2' action=''>
-      <label class='my-4' for='username'>Username:</label>
-      <input
-        class='w-full h-10'
-        id='username'
-        type='text'
-        placeholder='username'
-      />
-      <label class='my-4' for='Password'>Password:</label>
-      <input
-        class='w-auto h-10'
-        id='Password'
-        type='text'
-        placeholder='password'
-      />
-      <div class='flex justify-center items-center'>
+  <div class='container h-full flex flex-col'>
+    <form class='container form login-form flex flex-col m-auto p-2'>
+
+      <div class='form-group my-2 flex flex-col'>
+        <label for='user-login'>Username:</label>
+        <input
+          class='w-full h-10 form-input'
+          id='user-login'
+          type='text'
+          placeholder='username'
+        />
+      </div>
+
+      <div class='form-group my-2 flex flex-col'>
+        <label for='password-login'>Password:</label>
+        <input
+          class='w-auto h-10 form-input'
+          type='password'
+          id='password-login'
+          placeholder='password'
+        />
+      </div>
+
+      <div class='form-group flex justify-center items-center'>
         <input
           class='bg-gray-500 w-4/6 rounded-xl p-2 text-white mt-6 cursor-pointer hover:bg-gray-700 active:bg-gray-800'
           type='submit'
           value='Sign Up'
-          id='signUpBtn'
+          id='loginBtn'
         />
       </div>
+
     </form>
-    <div class='mt-2 align-left'>
-      <a id='logInLink' href='#' class='text-blue-500'>Log in instead</a>
+
+    <div class='m-2 align-left'>
+      <a id='signUpLink' href='/login' class='text-blue-500'>Log in instead</a>
     </div>
   </div>
 </div>
+
+<script src='./js/signup.js'></script>

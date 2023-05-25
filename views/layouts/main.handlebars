@@ -48,13 +48,11 @@
         </div>
       </div>
       <div class='container flex-auto h-3/6 w-auto m-5 content-center'>
-
         {{{body}}}
-
       </div>
     </div>
     <!-- Only include the logout script if the user is logged in -->
-    {{#if logged_in}}
+    {{#if loggedIn}}
       <script src='/js/logout.js'></script>
     {{/if}}
   </body>
