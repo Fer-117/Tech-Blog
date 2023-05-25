@@ -21,14 +21,15 @@
           >
             Dashboard
           </a>
-          {{#if loggedIn}}
+          {{#unless loggedIn}}
             <a
               id='logout'
-              href='/logout'
+              href='/api/users/logout'
               class='m-3 p-2 cursor-pointer rounded-lg hover:bg-blue-400 active:bg-blue-500'
             >
               Logout
             </a>
+            <script src='/js/logout.js'></script>
           {{else}}
             <a
               href='/login'
@@ -37,7 +38,7 @@
             >
               Login
             </a>
-          {{/if}}
+          {{/unless}}
         </div>
         <div class='container flex'>
           <p
@@ -52,8 +53,5 @@
       </div>
     </div>
     <!-- Only include the logout script if the user is logged in -->
-    {{#if loggedIn}}
-      <script src='/js/logout.js'></script>
-    {{/if}}
   </body>
 </html>
